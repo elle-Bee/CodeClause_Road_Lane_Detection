@@ -15,7 +15,7 @@ This repository contains a Python script for detecting and displaying lanes in a
 3. Place the video file you want to analyze in the same directory as the script and update the `cap_path` variable with the correct video filename.
 4. Run the script using the following command:
 ```shell
-   python lane_detection.py
+   python main.py
 ```
 
 ## Main Code
