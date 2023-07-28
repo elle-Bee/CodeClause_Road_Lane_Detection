@@ -43,12 +43,11 @@ while cap.isOpened():
     ret, frame = cap.read()
     if not ret:
         break
-    colour_frame = np.copy(frame)
     frame_canny = canny(frame)
     frame_roi = roi(frame_canny, roi_vertices)
     lane = cv.HoughLinesP(frame_roi, 2, np.pi/180, 100, np.array([]), minLineLength=40, maxLineGap=5)
     lines_frame = displayLines(frame, lane)
-    combo_frame = cv.addWeighted(colour_frame, 0.5, lines_frame, 1, 1)
+    combo_frame = cv.addWeighted(frame, 0.5, lines_frame, 1, 1)
     cv.imshow("Lane Detector", combo_frame)
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
