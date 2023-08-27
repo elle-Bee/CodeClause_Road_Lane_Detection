@@ -1,4 +1,4 @@
-# CodeClause_Road_Lane_Detection
+# Road Lane Detection
 
 This repository contains a Python script for detecting and displaying lanes in a video using OpenCV.
 
