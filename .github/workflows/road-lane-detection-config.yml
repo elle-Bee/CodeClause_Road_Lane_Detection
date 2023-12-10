@@ -19,7 +19,10 @@ jobs:
           python-version: 3.8
 
       - name: Install dependencies
-      - run: pip install -r ./requirements.tx
+      - run: |
+              pip install -r ./requirements.tx
+              pip install black
+              pip install pylint
 
       - name: Run Black
         run: black .
