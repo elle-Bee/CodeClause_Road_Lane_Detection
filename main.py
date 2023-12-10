@@ -1,3 +1,7 @@
+"""
+run road lane detection on a video
+"""
+
 import cv2 as cv
 import numpy as np
 
@@ -53,8 +57,8 @@ def roi(img, vertices):
     return final_masked
 
 
-cap_path = "test.mp4"
-cap = cv.VideoCapture(cap_path)
+CAP_PATH = "test.mp4"
+cap = cv.VideoCapture(CAP_PATH)
 
 cv.namedWindow("Lane Detector")
 cv.createTrackbar("Threshold 1", "Lane Detector", 0, 255, trackbar_click)
