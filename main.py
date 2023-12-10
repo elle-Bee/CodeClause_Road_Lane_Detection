@@ -2,7 +2,13 @@ import cv2 as cv
 import numpy as np
 
 
-def displayLines(img, lines):
+def display_lines(img, lines):
+    """
+    This function draws lines on the image passed to it.
+    :param img:
+    :param lines:
+    :return:
+    """
     line_image = np.zeros_like(img)
     if lines is not None:
         for line in lines:
@@ -12,6 +18,11 @@ def displayLines(img, lines):
 
 
 def canny(img):
+    """
+    This function returns the canny image of the image passed to it.
+    :param img:
+    :return:
+    """
     thresh1 = cv.getTrackbarPos("Threshold 1", "Lane Detector")
     thresh2 = cv.getTrackbarPos("Threshold 2", "Lane Detector")
     gray_img = cv.cvtColor(img, cv.COLOR_RGB2GRAY)
@@ -21,10 +32,21 @@ def canny(img):
 
 
 def trackbar_click(x):
+    """
+    This function is called when the trackbar is clicked.
+    :param x:
+    :return:
+    """
     print(x)
 
 
 def roi(img, vertices):
+    """
+    This function returns the region of interest of the image passed to it.
+    :param img:
+    :param vertices:
+    :return:
+    """
     region = np.zeros_like(img)
     cv.fillPoly(region, [vertices], 255)
     final_masked = cv.bitwise_and(img, region)
@@ -55,7 +77,7 @@ while cap.isOpened():
     lane = cv.HoughLinesP(
         frame_roi, 2, np.pi / 180, 100, np.array([]), minLineLength=40, maxLineGap=5
     )
-    lines_frame = displayLines(frame, lane)
+    lines_frame = display_lines(frame, lane)
     combo_frame = cv.addWeighted(frame, 0.5, lines_frame, 1, 1)
     cv.imshow("Lane Detector", combo_frame)
     if cv.waitKey(1) & 0xFF == ord("q"):

@@ -1,4 +1,4 @@
-name: pylint
+name: pre-commit
 
 on:
     push:
@@ -19,13 +19,16 @@ jobs:
           python-version: 3.8
 
       - name: Install dependencies
-      - run: |
-              pip install -r ./requirements.tx
-              pip install black
-              pip install pylint
+        run: pip install -r ./requirements.txt
 
-      - name: Run Black
-        run: black .
+      - name: Cache pre-commit
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pre-commit
+          key: ${{ runner.os }}-pre-commit-${{ hashFiles('**/..pre-commit-config.yaml') }}
 
-      - name: Run Pylint
-        run: pylint .
+      - name: Install pre-commit
+        run: pip install pre-commit
+
+      - name: Run pre-commit
+        run: pre-commit run --all-files
