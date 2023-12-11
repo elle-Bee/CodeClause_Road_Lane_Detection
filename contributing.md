@@ -4,10 +4,11 @@ Whether it's fixing a bug , proposing a new feature , or improving documentation
 appreciated.
 
 ### Code of Conduct
-Please make sure to read and follow our <a href="contributing.md">Code of Conduct</a> before contributing to the project.
+Please make sure to read and follow our <a href="code_of_conduct.md">Code of Conduct</a> before contributing to the project.
 
 ### Getting Started
 - `Fork` the repository
+
 <p>Create a personal copy of the Road_Lane_Detection_System. repository on Github.</p>
 <p>You can do this by clicking the Fork button on the Road_Lane_Detection_System. repository page.</p>
 ![Fork button](<Screenshot 2023-12-11 205143.png>)
@@ -35,6 +36,7 @@ $ git commit -m "Description of changes"
 $ git push origin <branch-name>
 ```
 - Submitting a `Pull Request`
+
 <li>Make sure your changes are well-documented and include relevant tests.</li>
 <li>If you've added new functionality, include appropriate documentation.</li>
 <li>Follow the coding conventions used in the project.</li>
@@ -53,5 +55,5 @@ $ git push origin <branch-name>
 - Issue tracker
 
 
-<h>Thank you again for your interest in contributing to Road_Lane_Detection_System.
-We look forward to working with you!</h>
+Thank you again for your interest in contributing to Road_Lane_Detection_System.
+We look forward to working with you!
