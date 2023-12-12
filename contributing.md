@@ -12,7 +12,7 @@ Please make sure to read and follow our <a href="code_of_conduct.md">Code of Con
 
 <p>Create a personal copy of the Road_Lane_Detection_System. repository on Github.</p>
 <p>You can do this by clicking the Fork button on the Road_Lane_Detection_System. repository page.</p>
-![fork button](<Screenshot 2023-12-11 205143-1.png>)
+![fork button](fork.png)
 
 #### Clone the repository locally:
 
