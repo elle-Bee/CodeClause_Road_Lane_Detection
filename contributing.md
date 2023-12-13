@@ -17,6 +17,21 @@ Please make sure to read and follow our <a href="code_of_conduct.md">Code of Con
 
 #### Clone the repository locally:
 
+Before submitting your pull request, make sure the following items have been checked:
+
+All tests pass and the build is successful.
+Your changes do not produce any new warnings or errors.
+Your changes have been thoroughly tested on different platforms and browsers.
+Your changes do not break backward compatibility.
+When you're ready, submit a pull request and include a descriptive title and a detailed description of your changes.
+
+Additional Resources
+Project documentation
+Issue tracker
+Thank you again for your interest in contributing to Road
+_Lane_Detection_System.
+
+We look forward to working with you!
 After forking the repository, clone it locally on your computer so that you can work on the code and make changes.
 ```bash
      $ git clone https://github.com/<YOUR-USERNAME>/Road_Lane_Detection_System..git
@@ -33,7 +48,7 @@ Push changes to the fork:</p>
 
 <p>Once the changes have been made, push them to your fork on Github.</p>
 
-```bash 
+```bash
 $ git add .
 $ git commit -m "Description of changes"
 $ git push origin <branch-name>
