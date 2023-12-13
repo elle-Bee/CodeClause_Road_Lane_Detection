@@ -48,7 +48,7 @@ Push changes to the fork:</p>
 
 <p>Once the changes have been made, push them to your fork on Github.</p>
 
-```bash 
+```bash
 $ git add .
 $ git commit -m "Description of changes"
 $ git push origin <branch-name>
