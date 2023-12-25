@@ -31,3 +31,48 @@ The main code initializes the video capture object using the provided video file
 8. The script continues processing frames until the user presses the 'q' key, at which point it terminates the video capture and closes the window.
 
 Feel free to modify the threshold values and the region of interest (`roi_vertices`) to better suit your specific use case. Happy lane detection!
+
+# Dockerfile Guide
+
+## Prerequisites
+Before building the Docker image, install the basic framework for a GUI environment, specifically 'X11' (assuming users are using Ubuntu).
+```bash
+apt-get install x11-xserver-utils
+```
+
+
+To display a GUI-based application in Docker, Allow X server connection:
+```bash
+xhost +local:*
+```
+You will get message "non-network local connections being added to access control list".
+## Verify Docker Status
+To ensure a seamless Docker experience, it's essential to check the status of the Docker service on your system.To verify whether the Docker service is currently active or inactive, you can use the following steps:
+1. Check Docker Service Status:
+```bash
+systemctl status docker
+```
+if it's inactive, you'll need to take corrective action.
+
+2. To activate the Docker service, use the following command:
+```bash
+sudo systemctl start docker
+```
+Re-run the **step-1** to verify the Changes.
+## Build
+Now, let's build the Docker image named 'lane_detection_app' using the docker build command:
+```bash
+sudo docker build -t lane_detection_app .
+```
+## Run
+Write the following command to run a Docker container named 'lane_detection'
+```bash
+sudo docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix/ --name lane_detection lane_detection_app
+```
+:tada: Yeah,You will be able to see the video playing on the display.
+## Closing Notes
+After the completion of testing,make sure to disallow the X server connection:
+```bash
+xhost -local:*
+```
+You will get message "non-network local connections being removed from access control list".
