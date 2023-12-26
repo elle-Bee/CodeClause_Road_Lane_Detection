@@ -8,15 +8,17 @@ This repository contains a Python script for detecting and displaying lanes in a
 - Python 3.x
 - OpenCV (`cv2`) library
 - NumPy library
+- Docker Desktop 
 
 ## Usage
 1. Clone the repository or download the `lane_detection.py` script.
 2. Make sure you have Python 3.x installed on your system along with the required libraries.
-3. Place the video file you want to analyze in the same directory as the script and update the `cap_path` variable with the correct video filename.
+3. Place the video file you want to analyze in the same directory as the script. In case your video is titled differently, ensure that you change it to `test.mp4`.
 4. Run the script using the following command:
 ```shell
    python main.py
 ```
+5. To run a container, refer to the ***Dockerfile Guide***.
 
 ## Main Code
 The main code initializes the video capture object using the provided video file path. It creates a named window "Lane Detector" and adds two trackbars for adjusting the Canny edge detection thresholds. The script then proceeds to process each frame of the video:
@@ -76,3 +78,4 @@ After the completion of testing,make sure to disallow the X server connection:
 xhost -local:*
 ```
 You will get message "non-network local connections being removed from access control list".
+
