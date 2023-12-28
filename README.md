@@ -51,6 +51,7 @@ Write the following command to run a Docker container named 'lane_detection'
 sudo docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix/ --name lane_detection lane_detection_app
 ```
 :tada: Yeah,You will be able to see the video playing on the display.
+
 8. #### Closing Notes:
 After the completion of testing,make sure to disallow the X server connection:
 ```bash
