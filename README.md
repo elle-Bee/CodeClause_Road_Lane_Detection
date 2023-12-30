@@ -5,7 +5,7 @@ This repository contains a Python script for detecting and displaying lanes in a
 ![Lane Detection Example](ss.png)
 
 ## Requirements
-- Docker Desktop 
+- Docker Desktop
 
 ## Usage
 1. Clone the repository.
@@ -13,15 +13,12 @@ This repository contains a Python script for detecting and displaying lanes in a
 ```bash
 cd Road-Lane-Detection-System
 ```
-
 3. Maintain a single video in the repository with the name **'test.mp4'** ,which is the default. If you opt to use an alternative video for testing, kindly remove the initial default video and rename your video to `test.mp4`
-
 4. #### Prerequisites:
 Before building the Docker image, install the basic framework for a GUI environment, specifically 'X11' (assuming users are using Ubuntu).
 ```bash
 apt-get install x11-xserver-utils
 ```
-
 To display a GUI-based application in Docker, Allow X server connection:
 ```bash
 xhost +local:*
